@@ -4,51 +4,156 @@
     <meta charset="UTF-8">
     <title>Gure Kroegentocht Groningen - 6 maart</title>
     <style>
-        /* Minimalistische CSS - geen aanpassingen nodig */
+        :root {
+            --bruin1: #2d1a0f;
+            --bruin2: #4a2b1a;
+            --bruin3: #6f4e37;
+            --accent: #d14334;
+        }
+
         body {
-            font-family: 'Arial', sans-serif;
-            line-height: 1.6;
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-            background: #f5f5f5;
+            font-family: 'Courier New', monospace;
+            line-height: 1.7;
+            margin: 0;
+            background: linear-gradient(to bottom right, #1a0f08, #2d1a0f);
+            color: #e3d5c8;
         }
+
+        .header {
+            background: url('https://tinyurl.com/2p8dz6yx') center/cover;
+            padding: 4rem 2rem;
+            text-align: center;
+            border-bottom: 5px solid var(--accent);
+        }
+
+        h1 {
+            font-size: 3.5rem;
+            color: #ffd700;
+            text-shadow: 2px 2px 0 var(--bruin1);
+            margin: 0;
+            font-family: 'IM Fell English', serif;
+        }
+
+        .ondertitel {
+            font-size: 1.4rem;
+            color: #e3d5c8;
+            margin-top: 1rem;
+        }
+
         .kroeg {
-            background: white;
-            padding: 15px;
-            margin: 20px 0;
-            border-radius: 5px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            background: #4a2b1a;
+            margin: 3rem auto;
+            padding: 2rem;
+            max-width: 800px;
+            border: 3px solid #6f4e37;
+            border-radius: 10px;
+            box-shadow: 5px 5px 15px rgba(0,0,0,0.5);
+            position: relative;
         }
-        h1 { color: #d80000; }
-        h2 { color: #333; }
+
+        .kroeg::before {
+            content: '🍺';
+            position: absolute;
+            left: -30px;
+            top: -30px;
+            font-size: 2rem;
+            text-shadow: 2px 2px 0 #000;
+        }
+
+        .kroeg h2 {
+            color: var(--accent);
+            border-bottom: 2px dashed #6f4e37;
+            padding-bottom: 0.5rem;
+            margin-top: 0;
+        }
+
+        .details {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+            margin: 1rem 0;
+        }
+
+        .gure-lijst {
+            list-style: none;
+            padding: 0;
+        }
+
+        .gure-lijst li {
+            margin: 0.8rem 0;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+
+        .gure-lijst li::before {
+            content: '⚫';
+            color: var(--accent);
+            position: absolute;
+            left: 0;
+        }
+
+        iframe {
+            border: 3px solid var(--bruin3);
+            margin: 2rem 0;
+        }
+
+        /* Voeg dit toe in <head> voor fonts */
+        <link href="https://fonts.googleapis.com/css2?family=IM+Fell+English&display=swap" rel="stylesheet">
     </style>
 </head>
 <body>
-    <h1>🍻 Gure Kroegentocht Groningen</h1>
-    <p><strong>Donderdag 6 maart - Start: 20:00 @ Café De Zwarte Hond</strong></p>
+    <header class="header">
+        <h1>GURE KROEGENTOCHT</h1>
+        <p class="ondertitel">6 maart 2024 | Een reis door Groningens rauwe onderbuik</p>
+    </header>
 
     <div class="kroeg">
         <h2>1. Café De Zwarte Hond</h2>
-        <p>📍 Oude Boteringestraat 42</p>
-        <p>🏆 <em>Waarom guur:</em> De enige kroeg waar de barvloer al 20 jaar niet is geschrobd, met een stamgast die beweert dat hij hier sinds 1979 "even blijft hangen".</p>
+        <div class="details">
+            <div>
+                <p>📍 <strong>Oude Boteringestraat 42</strong></p>
+                <p>🕒 Sinds 1979</p>
+            </div>
+            <div>
+                <p>🔥 <em>Gurigheidscore:</em> 9.3/10</p>
+                <p>🍻 <em>Huisbier:</em> 't Vaatje Vocht (€1,80)</p>
+            </div>
+        </div>
+        <ul class="gure-lijst">
+            <li>De bar waar tijd stil staat - letterlijk (klokken werken al jaren niet)</li>
+            <li>Beweerd wordt dat dezelfde ketchupfles al sinds 1995 op tafel 3 staat</li>
+            <li>Toiletdeur moet opengehouden worden met een bierviltje</li>
+            <li>Stamgast "Karel de Rat" geeft gratis rondleidingen als hij 10 pinten op heeft</li>
+        </ul>
     </div>
 
     <div class="kroeg">
         <h2>2. 't Vuilnisvat</h2>
-        <p>📍 Peperstraat 9</p>
-        <p>🏆 <em>Waarom guur:</em> Geen menukaart - je drinkt wat de barkeeper voor je kiest. Bekend van de "Willekeurige Woensdag" waar bier per liter wordt geserveerd.</p>
+        <div class="details">
+            <div>
+                <p>📍 <strong>Peperstraat 9</strong></p>
+                <p>🕒 Sinds 1988</p>
+            </div>
+            <div>
+                <p>🔥 <em>Gurigheidscore:</em> 9.7/10</p>
+                <p>🍻 <em>Huisbier:</em> Vat van Vergetelheid (€2,00)</p>
+            </div>
+        </div>
+        <ul class="gure-lijst">
+            <li>Geen menukaart - je drinkt wat de barkeeper voor je kiest</li>
+            <li>Vloerbedekking bestaat uit 30 jaar samengeperste sigarettenpeuken</li>
+            <li>"Mysterie Dinsdag": onbekend bier uit ongewassen glazen</li>
+            <li>Legendarisch toilet met deur die alleen van buiten op slot kan</li>
+        </ul>
     </div>
 
-    <div class="kroeg">
-        <h2>3. De Vergeten Kelder</h2>
-        <p>📍 Folkingestraat 101 (trap af, deur met kogelgat)</p>
-        <p>🏆 <em>Waarom guur:</em> Verlicht door kaarsvet, toiletdeuren die al 15 jaar op slot zitten, en een jukebox met alleen maar Normaal.</p>
-    </div>
+    <!-- Voeg meer kroegen toe in dezelfde structuur -->
 
-    <h2>🗺️ Routekaart</h2>
-    <!-- Vervang onderstaande link door je eigen Google Maps embed -->
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2388.032787325403!2d6.563583315827744!3d53.21926657995125!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c9cd1c57bba8a1%3A0xea72bc15b8d24037!2sGroningen!5e0!3m2!1snl!2snl!4v1622555274258!5m2!1snl!2snl" 
-            width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    <div style="text-align: center; padding: 2rem;">
+        <h2>🗺️ De Route der Wanhoop</h2>
+        <!-- Vervang onderstaande Google Maps embed code -->
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2388.032787325403!2d6.563583315827744!3d53.21926657995125!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c9cd1c57bba8a1%3A0xea72bc15b8d24037!2sGroningen!5e0!3m2!1snl!2snl!4v1622555274258!5m2!1snl!2snl" 
+                width="90%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    </div>
 </body>
 </html>
